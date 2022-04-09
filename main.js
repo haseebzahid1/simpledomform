@@ -1,10 +1,11 @@
 
-    var form = document.createElement("form");
+var form = document.createElement("form");
 form.setAttribute("id" , "form");
 form.setAttribute("class" , "form");
 
 var h2 = document.createElement("h2");
-var h2_text = document.createTextNode("Rgister With Us");
+h2.setAttribute("class","form-h1");
+var h2_text = document.createTextNode("Javascript With Us");
 h2.appendChild(h2_text);
 
 var form_control_1 = document.createElement("div");
@@ -84,6 +85,8 @@ input_4.setAttribute("type","text");
 /*  formControl Button Start */
 
 var button = document.createElement("button");
+button.setAttribute("class","button");
+button.setAttribute("id","btn1");
 button.setAttribute("type", "submit");
 var button_text = document.createTextNode("Submit");
 button.appendChild(button_text);
@@ -108,10 +111,17 @@ radio_2.setAttribute("value","2");
 
 
 
-document.getElementById("container").appendChild(form);
+document.querySelector(".col-left").appendChild(form);
+
+
+
 form.appendChild(h2);
 
 
+document.querySelector(".form-h1").onclick = abc;
+function abc(){
+    document.querySelector(".form-h1").style.color = "red";
+}
 
 form.appendChild(form_control_1);
 form_control_1.appendChild(label_1);
@@ -136,3 +146,43 @@ form.appendChild(form_control_5);
 form_control_5.appendChild(radio_2);
 
 form.appendChild(button);
+
+document.querySelector("#btn1").addEventListener("click",function(){
+    document.querySelector("#btn1").classList.add("btncolor");
+});
+
+
+
+
+
+var col_1 = document.createElement("div");
+col_1.setAttribute("class","small-img");
+
+var col_2 = document.createElement("div");
+col_2.setAttribute("class","small-img");
+
+
+document.querySelector(".gallery").appendChild(col_1);
+document.querySelector(".gallery").appendChild(col_2);
+
+document.querySelector(".form-h2").innerHTML = "Javascript With Dom ";
+document.querySelector(".form-h2").innerHTML;
+
+
+
+document.querySelector(".form-h2").addEventListener("click",function(){
+    document.querySelector(".form-h2").style.color = "blue";
+});
+
+document.querySelector(".btn-2").addEventListener("click",function(){
+    document.querySelector(".btn-2").classList.toggle("btncolor");
+});
+
+document.querySelector("#form2").addEventListener("click",function(){
+    document.querySelector("#form2").style.background = "rgb(112, 197, 223)";
+});
+
+// function abc(){
+    
+// }
+
